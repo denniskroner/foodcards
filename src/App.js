@@ -1,8 +1,18 @@
-import React, { Components } from "react";
+import React, { Component } from "react";
 
-class App extends Components {
+import axios from "axios";
+
+class App extends Component {
+  componentDidMount() {
+    axios
+      .get("https://www.themealdb.com/api/json/v1/1/random.php")
+      .then((response) => {
+        console.log(response);
+      });
+  }
+
   render() {
-    return <div></div>;
+    return <div> Test </div>;
   }
 }
 
