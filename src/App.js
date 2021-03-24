@@ -27,6 +27,7 @@ class App extends Component {
 
   httpRequestHandler = () => {
     axios
+    // https://www.themealdb.com/api/json/v1/1/categories.php
       .get("https://www.themealdb.com/api/json/v1/1/random.php")
       .then((response) => {
         // create copy of meals array
